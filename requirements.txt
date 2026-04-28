@@ -1,0 +1,11 @@
+mcp[cli]
+pydantic
+requests
+python-dotenv
+langchain
+langchain-groq
+chromadb
+sentence-transformers
+pytest
+streamlit
+torchvision
