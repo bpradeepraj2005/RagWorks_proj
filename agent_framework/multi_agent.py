@@ -39,8 +39,8 @@ def add_to_cart(product_id: str, quantity: int = 1) -> str:
 
 # --- LLM and Agent Setup ---
 api_key = os.getenv("GROQ_API_KEY", "dummy_key_to_prevent_crash")
-# Using llama-3.3-70b-versatile which is Groq's active tool-calling model
-llm = ChatGroq(temperature=0, groq_api_key=api_key, model_name="llama-3.3-70b-versatile")
+# Using llama-3.1-8b-instant because the 70b model ran out of Daily Tokens
+llm = ChatGroq(temperature=0, groq_api_key=api_key, model_name="llama-3.1-8b-instant")
 
 # Support Agent (RAG)
 support_tools = [search_store_policies]
